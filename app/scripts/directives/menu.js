@@ -11,7 +11,7 @@ angular.module('morApp')
 		controller:'menuCntr',
 
 		replace:true,
-		link : function(scope, element, attrs, empCntr){
+		link : function(scope, element, attrs, menuCntr){
 			console.log('mor MenuBar directive :::',scope.product,':::->:::',scope.use);
 		}
 	};

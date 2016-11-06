@@ -40,12 +40,14 @@ angular.module('morApp', [
             templateUrl: 'views/templates/home.html',
             controller: 'homeCntr'
         })
-        .when('/placeorder', {
-            templateUrl: 'views/templates/placeorder.html',
-            controller: 'placeOrderCntr'
+        .when('/product', {
+            templateUrl: 'views/templates/productDtls.html',
+            controller: 'proDtlCntr'
         })
-        
-        
+        .when('/more', {
+            templateUrl: 'views/templates/moreProDtls.html',
+            controller: 'moreDtlsCntr'
+        })
         .otherwise({
             redirectTo: '/error'
         });
