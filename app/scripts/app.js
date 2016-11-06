@@ -48,6 +48,10 @@ angular.module('morApp', [
             templateUrl: 'views/templates/moreProDtls.html',
             controller: 'moreDtlsCntr'
         })
+	.when('/placeorder', {
+            templateUrl: 'views/templates/placeorder.html',
+            controller: 'placeOrderCntr'
+        })
         .otherwise({
             redirectTo: '/error'
         });
