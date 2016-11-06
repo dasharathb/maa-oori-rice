@@ -1,0 +1,49 @@
+<div class="container-fluid">
+<div class="row" style="background-color:grey; font-size: larger;">
+  <div class="col-lg-3" style="color:white" >© Copyright {{footerDate|date:'yyyy'}}</div>
+  <div class=col-lg-7></div>
+  <div class="col-lg-2" >
+            <a href="javascript:" ng-click="comment();" class="glyphicon glyphicon-minus glyphicon-comment " style="color:white;align-items: center;display: flex;">
+                    comment
+            </a>
+      	<div id="confirmModal" class="modal fade" style="top: 100px;" aria-hidden="true" role="dialog">
+     		<div class="modal-dialog">
+        		<div class="modal-content">
+
+            		<div class="modal-header"> 
+                        <span><label>Comment</label></span>
+                		<button class="close" type="button" data-ng-click="close();" data-ng-disabled="confirmModel.$invalid">
+                    		<span aria-hidden="true">X</span>
+                		</button>
+            		</div>
+
+
+            		<div class="modal-body">
+            			<div class="row" >
+            				<fieldset style="border: 0px solid #c0c0c0;">
+            				 	<div class="col-lg-12">
+                                    <label>
+            				 	          email-id:
+                                    </label>
+                                        <span><input type="text" name="text" value="sumalathaeslavath@gmail.com" disabled style="width:243px"></span>
+	     						</div>
+            				</fieldset>
+            			</div>
+            			<div class="row" ng-show="true">
+            				<fieldset style="border: 0px solid #c0c0c0;">
+            				 	<div>
+            				 	 <textarea rows="4" cols="50" placeholder="Comment here......" style="width:332px;height: 100px;"></textarea>
+	     						</div>
+            				</fieldset>
+            			</div>
+            		</div>	
+            		<div class="modal-footer">
+                		<input type="button" class="btn btn-primary" data-ng-click="submit()" data-ng-disabled="confirmModel.$invalid" value="Send Message">
+                		<input type="button" class="btn btn-cancel" data-ng-click="close()" data-ng-disabled="confirmModel.$invalid" value="Cancel">
+            		</div>
+        		</div>
+        	</div>
+		</div>
+	</div> 
+ 	</div>	
+ 	</div>
