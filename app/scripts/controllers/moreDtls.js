@@ -7,6 +7,14 @@ angular.module('morApp')
 	$location.path('/more');
 	console.log('more product details');
 }
+       
+	 $scope.Order = function(){
+		$location.path('/placeorder')
+	}
+	$scope.Back = function(){
+		$location.path('/product')
+	}
+
         
 	
 }]); 

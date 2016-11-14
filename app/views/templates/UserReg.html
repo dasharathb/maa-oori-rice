@@ -1,0 +1,91 @@
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 568px">
+		<div class="row">
+		<div class="col-lg-7"></div>
+		<div class="col-lg-5">
+		<form>
+		<fieldset style="border: 15px solid #c18fbf !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px">
+		   <div style="color:grey">
+		        <h3><u><center> User Registration </center></u></h3>
+		   </div>
+           <div class="row" style="margin-bottom: 5px; margin-top:25px">
+			 <div class="col-lg-4">
+				<span><label class="lbl">First Name :</label></span>
+				<span style="color:red">*</span>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="text" name="fName" ng-model="fName" required="!" maxlength="25">
+			 </div>
+		  </div>
+		  <div class="row" style="margin-bottom: 5px;">
+			 <div class="col-lg-4">
+				<span><label class="lbl">Last Name :</label></span>
+				<span style="color:red">*</span>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="text" name="lName" ng-model="lName" required maxlength="25">
+			 </div>
+		  </div>
+	        <div class="row" style="margin-bottom: 5px">
+			  <div class="col-lg-4">
+				<span><label class="lbl">email :</label></span>
+				<span style="color:red">*</span>
+			  </div>
+			  <div class="col-lg-6">
+			    <input type="email" name="text" ng-model="email" required>
+			  </div>
+			</div>
+			<div class="row" style="margin-bottom: 5px">
+			  <div class="col-lg-4">
+				<span><label class="lbl">Phone No :</label></span>
+				<span style="color:red">*</span>
+	    	  </div>
+			  <div class="col-lg-6">
+				    <input type="phone" name="phone" maxlength="10" required>
+			  </div>
+			</div>
+			<div class="row" style="margin-bottom: 5px">
+			  <div class="col-lg-4">
+			   <label class="lbl">Address :</label>
+	     	  </div>
+			</div>
+		<div>
+			<fieldset style="border: 1px solid #c0c0c0">
+			<div style="margin-left:90px; margin-top:10px">
+        	  <label class="lbl"> Line1:</label>
+        	  <input type="text" name="add" ng-model="Line1" maxlength="50">
+		    </div>
+		    <div style="margin-left:90px;margin-top:4px">
+        	  <label class="lbl"> Line2:</label>
+        	  <input type="text" name="add" ng-model="Line2" maxlength="50">
+		    </div>
+		    <div style="margin-left:95px;margin-top:4px">
+        	  <label class="lbl"> City : </label>
+        	  <input type="text" name="City" ng-model="City" maxlength="20">
+		    </div>
+		    <div style="margin-left:89px;margin-top:4px">
+        	  <label class="lbl"> State : </label>
+        	  <input type="text" name="State" ng-model="State" maxlength="20">
+		    </div>	
+		    <div style="margin-left:99px;margin-top:4px">
+        	  <label class="lbl"> Pin : </label>
+        	  <input type="text" name="Pin" ng-model="Pin" maxlength="6">
+		    </div>	
+			</fieldset>
+			<div style="margin-top:10px">
+              <center>
+			  <button class="btn btn-lg btn-primary" ng-click="Register();">Register
+			  </button>
+			  </center>
+			</div>
+		</div>
+		</fieldset>	
+		</form>	
+	    </div>	
+		</div>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+</div>

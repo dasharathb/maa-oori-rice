@@ -9,8 +9,47 @@
 <div class="row">
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 568px">
-	<h1>
-    <center>This is Maa Oori Rice Application Soon.....</center></h1>	
+		<div class="row">
+		<div class="col-lg-7"></div>
+		<div class="col-lg-5">
+		<form>
+		<fieldset style="border: 5px solid #7a7a61 !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px">
+		<div style="color:grey">
+		<h3><u><center> Login</center></u></h3>
+		</div>
+          <div class="row" style="margin-bottom: 10px; margin-top:25px">
+			 <div class="col-lg-4">
+				<label class="lbl">User Name :</label>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="text" name="uName" ng-model="uName" required="!" maxlength="25">
+			 </div>
+		  </div>
+		  <div class="row">
+			 <div class="col-lg-4">
+				<span><label class="lbl"> PassWord :</label></span>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="text" name="pw" ng-model="pw" required maxlength="25">
+			 </div>
+			</div>
+			<div class="row" style="margin-top:5px;margin-left:220px">
+				<a href="#">Forgot Password ?</a>
+			</div>
+			<div class="row" style="margin-left:5px;margin-top:15px">
+				<button class="btn btn-primary" style="width:162px; margin-left:120px">Login</button>
+			 </div>
+		</form>	
+			 <div class ="row" style="margin-top:20px; margin-left:110px">
+			 <h5>----New to Maa Oori Rice ?----</h5>
+			 </div>
+			 <div class="row" style="margin-left:5px;margin-top:10px">
+				<button class="btn btn" ng-click="Register();" 
+				 style= "width:162px; margin-left:120px; background-color:#c4c475">Create Your Account</button>
+			 </div>	
+		</fieldset>	
+		</div>	
+		</div>
 	</div>
 	<div class="col-lg-2"></div>
 </div>

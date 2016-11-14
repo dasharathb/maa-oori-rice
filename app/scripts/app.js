@@ -48,9 +48,21 @@ angular.module('morApp', [
             templateUrl: 'views/templates/moreProDtls.html',
             controller: 'moreDtlsCntr'
         })
-	.when('/placeorder', {
-            templateUrl: 'views/templates/placeorder.html',
+        .when('/more2', {
+            templateUrl: 'views/templates/moreProDtls2.html',
+            controller: 'moreDtlsCntr'
+        })
+        .when('/more3', {
+            templateUrl: 'views/templates/moreProDtls3.html',
+            controller: 'moreDtlsCntr'
+        })
+	    .when('/placeorder', {
+            templateUrl: 'views/templates/placeOrder.html',
             controller: 'placeOrderCntr'
+        })
+        .when('/Registration', {
+            templateUrl: 'views/templates/UserReg.html',
+            controller: 'UserRegCntr'
         })
         .otherwise({
             redirectTo: '/error'
