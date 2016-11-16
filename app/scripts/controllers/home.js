@@ -5,7 +5,7 @@ angular.module('morApp')
 	function($scope, $rootScope, $location){
 	console.log('hello this is home page controller...');
     $scope.Register = function(){
-		$location.path('/Registration')
+		$location.path('/registration')
 	}
 	
 }]); 

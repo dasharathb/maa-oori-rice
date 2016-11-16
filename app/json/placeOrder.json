@@ -1,0 +1,23 @@
+{
+		"orders":[
+		
+		{
+			"sNo":1,
+			"riceType":"Brown Rice",
+			"quantity":"",
+			"amount":""
+		},
+		{
+			"sNo":2,
+			"riceType":"Semi Polished Rice",
+			"quantity":"",
+			"amount":""
+		},
+		{
+			"sNo":3,
+			"riceType":"Fully Polished Rice",
+			"quantity":"",
+			"amount":""
+		}
+	]
+}

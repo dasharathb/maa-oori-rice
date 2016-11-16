@@ -60,7 +60,11 @@ angular.module('morApp', [
             templateUrl: 'views/templates/placeOrder.html',
             controller: 'placeOrderCntr'
         })
-        .when('/Registration', {
+        .when('/itemdetails', {
+            templateUrl: 'views/templates/orderItemDtls.html',
+            controller: 'orderItemCntr'
+        })
+        .when('/registration', {
             templateUrl: 'views/templates/UserReg.html',
             controller: 'UserRegCntr'
         })
