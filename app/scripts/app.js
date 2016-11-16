@@ -65,8 +65,12 @@ angular.module('morApp', [
             controller: 'orderItemCntr'
         })
         .when('/registration', {
-            templateUrl: 'views/templates/UserReg.html',
-            controller: 'UserRegCntr'
+            templateUrl: 'views/templates/userReg.html',
+            controller: 'userRegCntr'
+        })
+        .when('/login', {
+            templateUrl: 'views/templates/login.html',
+            controller: 'loginCntr'
         })
         .otherwise({
             redirectTo: '/error'

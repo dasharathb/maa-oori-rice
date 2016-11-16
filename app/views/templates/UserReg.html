@@ -2,11 +2,9 @@
 <div class="row">
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 568px">
-		<div class="row">
-		<div class="col-lg-7"></div>
-		<div class="col-lg-5">
 		<form>
-		<fieldset style="border: 15px solid #c18fbf !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px">
+		<center>
+		<fieldset style="border: 5px solid #c18fbf !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px;width: 401px;">
 		   <div style="color:grey">
 		        <h3><u><center> User Registration </center></u></h3>
 		   </div>
@@ -30,7 +28,7 @@
 		  </div>
 	        <div class="row" style="margin-bottom: 5px">
 			  <div class="col-lg-4">
-				<span><label class="lbl">email :</label></span>
+				<span><label class="lbl" style="padding-left:34px">email :</label></span>
 				<span style="color:red">*</span>
 			  </div>
 			  <div class="col-lg-6">
@@ -43,7 +41,7 @@
 				<span style="color:red">*</span>
 	    	  </div>
 			  <div class="col-lg-6">
-				    <input type="phone" name="phone" maxlength="10" required>
+				    <input type="phone" name="phone" ng-model="phone" maxlength="10" required>
 			  </div>
 			</div>
 			<div class="row" style="margin-bottom: 5px">
@@ -52,7 +50,7 @@
 	     	  </div>
 			</div>
 		<div>
-			<fieldset style="border: 1px solid #c0c0c0">
+			<fieldset style="border: 1px solid #c0c0c0;border-radius: 14px">
 			<div style="margin-left:90px; margin-top:10px">
         	  <label class="lbl"> Line1:</label>
         	  <input type="text" name="add" ng-model="Line1" maxlength="50">
@@ -82,6 +80,7 @@
 			</div>
 		</div>
 		</fieldset>	
+		</center>
 		</form>	
 	    </div>	
 		</div>
