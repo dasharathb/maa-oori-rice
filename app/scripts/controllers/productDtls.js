@@ -5,8 +5,16 @@ angular.module('morApp')
 	
 	console.log('this product details controller');
 
-	$scope.moreDtls = function(){
-		$location.path('/more/')
+	$scope.brDtls = function(){
+		$location.path('/more')
 	}
-		
+	$scope.spDtls = function(){
+		$location.path('/more2')
+	}
+		$scope.fpDtls = function(){
+		$location.path('/more3')
+	}
+	$scope.Order = function(){
+		$location.path('/placeorder')
+	}
 }]);

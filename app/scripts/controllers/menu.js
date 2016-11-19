@@ -9,9 +9,10 @@ angular.module('morApp')
 		$location.path('/product');
 		console.log('product details......');
 	}
-	$scope.placeorder=function(){
-			console.log('this tutor menuCntr  directive controller');
-			$location.path('/placeorder');
-    	}
+	$scope.placeOrder=function(){
+		console.log('this tutor menuCntr  directive controller');
+		$location.path('/placeorder');
+    }
+
 		
 }]);

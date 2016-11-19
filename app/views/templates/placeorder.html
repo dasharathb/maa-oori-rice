@@ -1,3 +1,105 @@
-<div>
-this is place holder page......................
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-2"></div>
+   <div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 570px">
+   <div class="col-lg-8">
+   <fieldset style="border: 2px solid #c0c0c0 !important;margin-top:15px;padding: 0.35em 0.625em 0.75em;background-color: #ffffff;border-radius: 5px">
+   <div style="margin-bottom:15px;color:grey"><u><b>Place Order </b></u></div>
+    	<div style="margin-bottom:5px">
+    		<label class="lbl">Rice type :</label>
+      		<select>
+      		   <option value="--Select--">--Select--</option>
+               <option value="Brown Rice">Brown Rice</option>
+               <option value="Semi Polished Rice">Semi Polished Rice</option>
+               <option value="Fully Polished Rice">Fully Polished Rice</option>
+            </select>
+    	</div>
+    	<div style="margin-bottom:5px">
+    		<label class="lbl">Quantity :</label>
+    		<select style="margin-left:6px;width:143px">
+      		   <option value="--Select--">--Select--</option>
+               <option value="5kgs">5 kgs</option>
+               <option value="10kgs">10 kgs</option>
+               <option value="25kgs">25 kgs</option>
+               <option value="10kgs">50 kgs</option>
+               <option value="25kgs">75 kgs</option>
+               <option value="10kgs">100 kgs</option>
+            </select>
+    	</div>  
+    	<div style="margin-bottom:5px">
+    		<label class="lbl">Amount :</label>
+    	</div>
+    	<div>
+    		<table class="table table-bordered table-hover table-striped ">
+	   	  <thead>
+	   	  	<tr>
+	   	  		<th>S.no</th>
+	   	  		<th>Rice Type</th>
+	   	  		<th>Quantity</th>
+	   	  		<th>Amount</th>
+	   	  		<th>Add/Remove</th>
+	   	  	</tr>
+	   	  </thead>	
+	   	  <tbody>
+	   	  	<tr>
+	   	  		<td><center>1</center></td>
+	   	  		<td><center>Brown Rice</center></td>
+	   	  		<td><center>25kgs</center></td>
+	   	  		<td>Rs :</td>
+	   	  		<td></td>
+	   	  	</tr>
+	   	  	<tr>
+	   	  		<td colspan="5"><center><b  style="margin-left:20px">Total Amount :</b></center></td>
+	   	  	</tr>
+	   	  </tbody>
+	   	</table>
+    	</div>
+    	<fieldset style="border: 2px solid #c0c0c0 !important;margin-top:15px;padding: 0.35em 0.625em 0.75em;background-color: #ffffff;border-radius: 5px">
+    	<div style="margin-bottom:5px">
+    		<label class="lbl">Shipping Address :</label>
+        </div>
+        <div style="margin-left:50px; margin-bottom:5px">
+        	<label class="lbl"> Line1:</label>
+        	<input type="text" name="add" ng-model="Line1">
+		    </div>
+		<div style="margin-left:50px; margin-bottom:5px">
+        	<label class="lbl"> Line2:</label>
+        	<input type="text" name="add" ng-model="Line2">
+		</div>
+		<div class="row">
+		<div class="col-lg-4" style="margin-left:50px; margin-bottom:5px">
+        	<label class="lbl"> city :</label>
+        	<select style="margin-left:8px;width:125px">
+        		<option value="Hyd">Hyderabad</option>
+        		<option value="wgl">Warngal</option>
+        		<option value="Knr">Karimnagar</option>
+        		<option value="Crl">Circilla</option>
+        	</select>
+		</div>
+		<div class="col-lg-4" style="margin-left:14px">
+			<label class="lbl">State :</label>
+			<select>
+				<option value="TS">Telangana</option>
+				<option value="AP">Andrapradesh</option>
+			</select>
+		</div>
+		</div>
+		<div style="margin-left:60px;margin-bottom:5px">
+        	<label class="lbl"> Pin :</label>
+        	<input type="text" name="AreaPin" ng-model="AreaPin" maxlength="6">
+		</div>
+		<div style="margin-left:36px; margin-bottom:5px">
+        	<label class="lbl"> Mobile :</label>
+        	<input type="text" name="Mobile" ng-model="Mobile" maxlength="10">
+		</div>
+    	</fieldset>
+    	<div style="margin-left:50px;margin-top:5px">
+    		<button class="btn btn-strong"> Submit </button>
+    		<button class="btn btn-strong" style="margin-left:270px" > Cancel </button>
+    	</div>
+    	</fieldset>
+    </div>   	
+    </div>    
+  <div class="col-lg-2"></div>
+</div>
 <div>
