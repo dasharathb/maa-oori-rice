@@ -24,19 +24,19 @@ module.exports = function (grunt) {
     warDist: 'war',
     dateTime: new Date().getTime(),
     local: {
-      serviceBE: '/maa-oori-rice',
+      serviceBE: 'http://localhost:9010/maa-oori-rice-server',
       serviceQURI: 'https://presence.q.att.com'
     },
     dev: {
-      serviceBE: '/maa-oori-rice', //need service uri for future plans
+      serviceBE: 'http://localhost:9010/maa-oori-rice-server', //need service uri for future plans
       serviceQURI: 'https://presence.q.att.com'
     },
     qa: {
-      serviceBE: '/maa-oori-rice',
+      serviceBE: 'http://localhost:9010/maa-oori-rice-server',
       serviceQURI: 'https://presence.q.att.com'
     },
     prod: {
-      serviceBE: '/maa-oori-rice',
+      serviceBE: 'http://localhost:9010/maa-oori-rice-server',
       serviceQURI: 'https://presence.q.att.com'
     },
   };

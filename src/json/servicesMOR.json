@@ -1,4 +1,5 @@
 {
-	"admin":"/admin"
+	"login":"/login",
+	"registration":"/registration/mor"
 	
 }

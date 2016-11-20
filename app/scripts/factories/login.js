@@ -1,15 +1,21 @@
 'use strict';
 
 angular.module('morApp')
-.factory('loginFactory', ['$http','$q', function( $http, $q ){
+.factory('loginFactory', ['$http', '$location', '$q', 'getServiceURI', function( $http, $location, $q, getServiceURI ){
 	var loginFactory = {};
 
 		loginFactory.loginUser = function(loginDtl){
 
 			var defer = $q.defer();
 			console.log('factory ::: ',loginDtl);
-			var serviceURI = 'http://localhost:9010/maa-oori-rice/login';
-			
+			//	var serviceURI = 'http://localhost:9010/maa-oori-rice/login';
+			var serviceURI = getServiceURI.build('mor', 'login');
+
+					/*if($location.host() === 'localhost'){
+						if($location.port() === 9000){
+							serviceURI = 'json/is-admin.json';
+						}
+					}*/
 			$http({
 				method: 'GET',
 				url: serviceURI,
