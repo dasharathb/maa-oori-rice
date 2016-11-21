@@ -7,12 +7,13 @@
   "debug": true,
   "services": {
     "uri": {
-      "mor": "/maa-oori-rice",
+      "mor": "http://localhost:9010/maa-oori-rice-server",
       "qPresence": "https://presence.q.att.com"
     },
     "endpoints": {
       "mor": {
-        "admin": "/admin"
+        "login": "/login",
+        "registration": "/registration/mor"
       },
       "qPresence": {
         "presence": "/presence"

@@ -8,37 +8,28 @@ angular.module('morApp')
 
 			var defer = $q.defer();
 			console.log('factory ::: ',loginDtl);
-			//	var serviceURI = 'http://localhost:9010/maa-oori-rice/login';
+			
 			var serviceURI = getServiceURI.build('mor', 'login');
-
-					/*if($location.host() === 'localhost'){
-						if($location.port() === 9000){
-							serviceURI = 'json/is-admin.json';
-						}
-					}*/
+			/*if($location.host() === 'localhost'){
+				if($location.port() === 9000){
+					serviceURI = 'json/is-admin.json';
+				}
+			}*/
 			$http({
 				method: 'GET',
 				url: serviceURI,
-				params:	{"userName":loginDtl.userName, "password": loginDtl.password},
-				headers : {'Content-Type': 'application/json'}
+				params:	{
+					loginDtl:loginDtl
+					}
 			})
 			.then(function(data){
-				console.log('factory ::: ',data);
+				console.log('factory :::1:: ',data);
 				defer.resolve(data.data);
 			},
 			 function(failedReason){						
 				defer.reject(failedReason);
 			});
-			/*
-			$http.POST(serviceURI, loginDtl )
-			.seccess(function(data){
-				console.log('factory ::: ',data);
-				defer.resolve(data.data);
-			})
-			.error(function(failedReason){						
-				defer.reject(failedReason);
-			});*/
-		
+					
 			return defer.promise;
 		};
 

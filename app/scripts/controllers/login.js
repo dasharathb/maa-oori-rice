@@ -10,17 +10,10 @@ angular.module('morApp')
 		loginDtl.userName = $scope.userName;
 		loginDtl.password = $scope.password;
 		loginFactory.loginUser(loginDtl).then(function(result){
-			console.log('---------->',result);
+			console.log('---------->',result);			
+			$rootScope.loginUserName = result.firstName+" "+result.lastName;
+			$rootScope.isLoggedIn = true;		
 			
-			//setTimeout(function () {
-			//	$scope.$apply(function(){
-					console.log('apply................');
-					$rootScope.loginUserName = result.firstName+" "+result.lastName;
-					$rootScope.isLoggedIn = true;
-			//	});
-			//}, 200);
-			
-			console.log('rootScope.loginUserName:::::::',$rootScope.loginUserName);
 			$location.path('/product');
 		});
 	}	

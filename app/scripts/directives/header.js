@@ -3,7 +3,8 @@ angular.module('morApp')
 .directive('headerDtl',[function(){
 	return{
 		scope:{
-
+			loginUserName:'=',
+			isLoggedIn:'='
 		},
 		restrict:'EA',
 		templateUrl:'views/templates/header.html',
