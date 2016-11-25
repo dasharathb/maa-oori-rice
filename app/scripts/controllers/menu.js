@@ -13,6 +13,17 @@ angular.module('morApp')
 		console.log('this tutor menuCntr  directive controller');
 		$location.path('/placeorder');
     }
-
+    $scope.userAcc=function(){
+		console.log('this user account');
+		$location.path('/account');
+    }
+	$scope.order=function(){
+		console.log('this user account');
+		$location.path('/orderHistory');
+    }
+    $scope.track=function(){
+		console.log('this user account');
+		$location.path('/trackMyOrder');
+    }
 		
 }]);

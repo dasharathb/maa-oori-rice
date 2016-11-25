@@ -66,11 +66,27 @@ angular.module('morApp', [
         })
         .when('/registration', {
             templateUrl: 'views/templates/userReg.html',
-            controller: 'userRegCntr'
+            controller: 'loginCntr'
         })
         .when('/login', {
             templateUrl: 'views/templates/login.html',
             controller: 'loginCntr'
+        })
+        .when('/account', {
+            templateUrl: 'views/templates/account.html',
+            controller: 'loginCntr'
+        })
+        .when('/orderHistory', {
+            templateUrl: 'views/templates/orderHistory.html',
+            controller: 'placeOrderCntr'
+        })
+        .when('/trackMyOrder', {
+            templateUrl: 'views/templates/trackMyOrder.html',
+            controller: 'placeOrderCntr'
+        })
+        .when('/hello',{
+            templateUrl: 'views/templates/hello.html',
+            controller: 'Hcntl'
         })
         .otherwise({
             redirectTo: '/error'
