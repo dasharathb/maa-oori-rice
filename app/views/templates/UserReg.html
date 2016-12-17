@@ -47,6 +47,24 @@
 			</div>
 			<div class="row" style="margin-bottom: 5px">
 			  <div class="col-lg-4">
+				<span><label class="lbl">Password :</label></span>
+				<span style="color:red">*</span>
+	    	  </div>
+			  <div class="col-lg-6">
+				    <input type="password" name="password" ng-model="password" maxlength="10" required>
+			  </div>
+			</div>
+			<div class="row" style="margin-bottom: 5px">
+			  <div class="col-lg-4">
+				<span><label class="lbl">Conform Password :</label></span>
+				<span style="color:red">*</span>
+	    	  </div>
+			  <div class="col-lg-6">
+				    <input type="phone" name="phone" ng-model="phone" maxlength="10" required>
+			  </div>
+			</div>
+			<div class="row" style="margin-bottom: 5px">
+			  <div class="col-lg-4">
 			   <label class="lbl" style="margin-right: 17px">Address :</label>
 	     	  </div>
 			</div>
@@ -75,7 +93,7 @@
 			</fieldset>
 			<div style="margin-top:10px">
               <center>
-			  <button class="btn btn-lg btn-primary" ng-click="Register();">Register
+			  <button class="btn btn-lg btn-primary" ng-click="register();">Register
 			  </button>
 			  </center>
 			</div>

@@ -1,17 +1,22 @@
 'use strict';
 
 angular.module('morApp')
-.factory('regFactory', ['$http','$q', function( $http, $q ){
+.factory('regFactory', ['$http','$q', 'getServiceURI', function( $http, $q, getServiceURI ){
 	var regFactory = {};
 
-		regFactory.getRegDetailes = function(){
+		regFactory.getRegDetailes = function(register){
 
 			var defer = $q.defer();
 
-			var serviceURI = './json/register.json';
+			//var serviceURI = './json/register.json';
+			var serviceURI = getServiceURI.build('mor', 'regUser');
+			console.log('serviceURI::::::::::::::::',serviceURI);
 			$http({
 				method: 'GET',
-				url: serviceURI
+				url: serviceURI,
+				params:	{
+					userDtl:register
+					}
 			})
 			.then(function(data){
 				console.log('factory ::: ',data);

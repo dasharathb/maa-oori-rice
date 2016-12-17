@@ -66,7 +66,7 @@ angular.module('morApp', [
         })
         .when('/registration', {
             templateUrl: 'views/templates/userReg.html',
-            controller: 'loginCntr'
+            controller: 'userRegCntr'
         })
         .when('/login', {
             templateUrl: 'views/templates/login.html',

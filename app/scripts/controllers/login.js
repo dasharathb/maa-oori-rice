@@ -17,7 +17,7 @@ angular.module('morApp')
 			$location.path('/product');
 		});
 	}	
-	$scope.Register=function(){
+	/*$scope.Register=function(){
 		$location.path('/registration');
 		var regDtl = {};
 		regDtl.firstName=$scope.fName;
@@ -36,6 +36,6 @@ angular.module('morApp')
 
         });	
 
-	}
+	}*/
 	
 }]); 
