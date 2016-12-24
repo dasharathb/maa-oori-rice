@@ -11,20 +11,23 @@
 		<h3><u><center> Login</center></u></h3>
 		</div>
           <div class="row" style="margin-bottom: 10px; margin-top:25px">
-			 <div class="col-lg-4">
-				<label class="lbl">User Name :</label>
+			 <div class="col-lg-5" style="padding-left: 0px;">
+				<label class="lbl" style="padding-left: 34px;">Email/Phone :</label>
 			 </div>
 			 <div class="col-lg-6" >
-				<input type="text" name="userName" ng-model="userName" required="!" maxlength="25">
+				<input type="text" name="userId" ng-model="userId" required>
 			 </div>
 		  </div>
 		  <div class="row">
-			 <div class="col-lg-4">
-				<span><label class="lbl" style="margin-left: 6px;"> Password :</label></span>
+			 <div class="col-lg-5">
+				<span><label class="lbl" style="margin-left: 36px;"> Password :</label></span>
 			 </div>
 			 <div class="col-lg-6" >
-				<input type="password" name="password" ng-model="password" required maxlength="25">
+				<input type="password" name="password" ng-model="password" required minlength="4">
 			 </div>
+			</div>
+			<div>
+				{{error}}
 			</div>
 			<div class="row" style="margin-top:5px;margin-left:169px">
 				<a href="#">Forgot Password ?</a>
@@ -36,7 +39,7 @@
 			 </div>
 		</form>
 			 <div class ="row" style="margin-top:20px; margin-left:110px">
-			   <a href="javascript:" ng-click="Register();" padding-left: 11px;">Create your account</a>
+			   <a href="javascript:" ng-click="register();" padding-left: 11px;">Create your account</a>
 			 </div>
 			 <!--<div class="row" style="margin-left:5px;margin-top:10px">
 				<button class="btn btn" ng-click="Register();" 

@@ -7,35 +7,52 @@ angular.module('morApp')
 	$scope.login = function(){
 		$rootScope.isLoggedIn = false;
 		var loginDtl = {};
-		loginDtl.userName = $scope.userName;
-		loginDtl.password = $scope.password;
-		loginFactory.loginUser(loginDtl).then(function(result){
-			console.log('---------->',result);			
-			$rootScope.loginUserName = result.firstName+" "+result.lastName;
-			$rootScope.isLoggedIn = true;		
+		//console.log("phone # "+$scope.userId);
+		
+
+		if(isNaN($scope.userId)){
+			//console.log("phone # "+$scope.userId);
+			if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($scope.userId)){
+				loginDtl.email = $scope.userId;
+				$scope.error = "";
+			}else {
+				$scope.error = "please enter valid email";
+				return;
+			}
 			
-			$location.path('/product');
+		}else{
+			console.log('/^\d+$/.test($scope.userId).length() ',$scope.userId.length);
+			if(/^\d+$/.test($scope.userId) && $scope.userId.length==10){
+				loginDtl.phone = $scope.userId;
+				$scope.error = "";
+			}else {
+				$scope.error = "please enter valid phone";
+				return;
+			}	
+			
+		}
+		//loginDtl.email = $scope.email;
+		loginDtl.password = $scope.password;
+		console.log('loginDtl :::::::::::::::: ',loginDtl);
+		loginFactory.loginUser(loginDtl).then(function(result){
+			console.log('---------->',result);
+			if(result != ""){
+				$rootScope.isLoggedIn = true;
+				$rootScope.loginUserName = result.firstName +" "+ result.lastName;
+				$rootScope.emailId= result.email;
+				$location.path('/product');
+			}else{
+				$scope.error = "user name or password is invalid.";
+			}			
+			
+					
+			
+			
 		});
 	}	
-	/*$scope.Register=function(){
+	$scope.register=function(){
 		$location.path('/registration');
-		var regDtl = {};
-		regDtl.firstName=$scope.fName;
-		regDtl.lastName=$scope.lName;
-		regDtl.email=$scope.email;
-		regDtl.phoneNumber=$scope.phone;
-		regDtl.line1=$scope.Line1;
-		regDtl.line2=$scope.Line2;
-		regDtl.city=$scope.City;
-		regDtl.state=$scope.State;
-		regDtl.pin=$scope.Pin;
-		//console.log($scope.firstName,$scope.lastName,$scope.email,$scope.phoneNumber,$scope.line1,$scope.line2,$scope.city,$scope.state,$scope.pin);
-        regFactory.userReg(regDtl).then(function(result){
-        	console.log("registration");
 
-
-        });	
-
-	}*/
+	}
 	
 }]); 

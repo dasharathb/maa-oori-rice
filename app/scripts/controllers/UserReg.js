@@ -12,11 +12,14 @@ angular.module('morApp')
 		register.email=$scope.email;
 		register.phone=$scope.phone;
 		register.password=$scope.password;
-		register.addressLine1=$scope.Line1;
-		register.addressLine2=$scope.Line2;
-		register.city=$scope.City;
-		register.state=$scope.State;
-		register.pin=$scope.Pin;
+		register.address = [];
+		var addr ={}; 
+		addr.addressLine1=$scope.Line1;
+		addr.addressLine2=$scope.Line2;
+		addr.city=$scope.City;
+		addr.state=$scope.State;
+		addr.pin=$scope.Pin;
+		register.address.push(addr);
 
 		console.log('register:::::::::::',register);
 		//console.log($scope.firstName,$scope.lastName,$scope.email,$scope.phoneNumber,$scope.line1,$scope.line2,$scope.city,$scope.state,$scope.pin);

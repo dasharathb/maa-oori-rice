@@ -1,42 +1,40 @@
 'use strict';
 angular.module('morApp')
-.controller('placeOrderCntr', ['$scope','$rootScope', '$location', 'pOrderFactory',
-	function($scope, $rootScope, $location, pOrderFactory){
+.controller('placeOrderCntr', ['$scope','$rootScope', '$location', 'pOrderFactory','accountFact',
+	function($scope, $rootScope, $location, pOrderFactory,accountFact){
 	console.log('this is a place Order controller............');
 
 //	$scope.Submit = function(){
 //		$location.path('/itemdetails')
 //	}
-	$scope.orders =[];
-	$scope.id = 1;
-	
+$scope.placeOrder=[];
+    $scope.save = function(){
+
+    	 	var place ={}
+			place.riceType=$scope.riceType;
+    	   	place.quantity=$scope.quantity;
+			console.log('place::::: ',place);	
+    		$scope.placeOrder.push(place);
+    	}
+    $scope.submit = function(){
+    
+    	console.log('this is a place Order controller..1111111111111..........');
+    	/*$('#mytable tr').each(function() {
+           var customerId = $(this).find("td").eq(2).html();    
+});*/
+			$("td[data-column='"+2+"']")
+    	
+    }	
+
 	$scope.getOrderDetailes = function(){
-		pOrderFactory.getOrderDetailes().then(function(data){
+		accountFact.getUserDetails($rootScope.emailId).then(function(data){
 			console.log('controller ::::: ',data);
-			$scope.order = data.orders;
+			 $scope.accDtl = data;
 		});
 	}
-
-	$scope.submit = function(){
-		console.log("sNo : ",$scope.sNo," riceType : ",$scope.riceType," quantity : ",$scope.quantity);
-
-			$scope.order = {
-				"id": $scope.id,
-				"riceType":$scope.riceType,
-				"quantity":$scope.quantity,
-				"amount":$scope.amount
-			};
-			$scope.id = $scope.id +1;
-			console.log('order ::: ',$scope.order);
-			$scope.orders.push($scope.order);
-		
-		console.log('orders ::: ',$scope.orders);
-		$location.path('/itemdetails/'+JSON.stringify($scope.orders));
-
-	};
-	$scope.init = function(){
+   $scope.init = function(){
 		$scope.getOrderDetailes();
-	};	
+	}
 
 	$scope.init();
 	

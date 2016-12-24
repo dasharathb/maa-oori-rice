@@ -23,12 +23,13 @@ angular.module('morApp')
 				params:	{
 					loginDtl:loginDtl
 					}
-			})
-			.then(function(data){
-				console.log('factory :::1:: ',data);
+			}).then(function(data){
+				console.log('factory :::1:: ');
+				console.log('factory :::1:: ',data.data);
 				defer.resolve(data.data);
 			},
-			 function(failedReason){						
+			 function(failedReason){
+			 	console.log('failedReason :::: ',failedReason);						
 				defer.reject(failedReason);
 			});
 					

@@ -13,7 +13,9 @@
     "endpoints": {
       "mor": {
         "login": "/login",
-        "regUser": "/regUser"
+        "regUser": "/regUser",
+        "account": "/account",
+        "placeorder": "/placeorder"
       },
       "qPresence": {
         "presence": "/presence"

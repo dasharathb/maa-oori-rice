@@ -74,7 +74,7 @@ angular.module('morApp', [
         })
         .when('/account', {
             templateUrl: 'views/templates/account.html',
-            controller: 'loginCntr'
+            controller: 'accountCntrl'
         })
         .when('/orderHistory', {
             templateUrl: 'views/templates/orderHistory.html',

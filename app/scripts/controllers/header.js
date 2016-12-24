@@ -2,12 +2,12 @@
 angular.module('morApp')
 .controller('headerCntl',['$rootScope', '$scope', '$location',function($rootScope, $scope, $location){
 	$rootScope.isLoggedIn = false;
-	$rootScope.loginUserName = "tttt";
+	$rootScope.loginEmail = "tttt";
 	$scope.login=function(){
 		console.log('this is login.............');
 		$location.path('/login');
 
 	}
-	console.log(':::::::::::::',$rootScope.loginUserName);
+	console.log(':::::::::::::',$rootScope.loginEmail);
 
 }]);

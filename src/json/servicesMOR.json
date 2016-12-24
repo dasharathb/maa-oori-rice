@@ -1,5 +1,7 @@
 {
 	"login":"/login",
-	"registration":"/registration/mor"
+	"regUser":"/regUser",
+	"account":"/account",
+	"placeorder":"/placeorder"
 	
 }
