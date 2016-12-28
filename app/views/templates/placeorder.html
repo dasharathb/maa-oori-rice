@@ -1,8 +1,7 @@
 <div class="container-fluid">
 <div class="row">
   <div class="col-lg-2"></div>
-   <div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px;min-height: 570px;
-    max-height: inherit;">
+   <div class="col-lg-8 main-body-container">
     <center>
       <div style=" margin-top:10px;color:grey;font-size: 16px;"><u><b>Place Order </b></u></div>
     </center>
@@ -13,7 +12,7 @@
                 
                       <div style="margin-bottom:5px ;margin-top:5px;">
     		                    <label>Rice type :</label>
-      		                  <select  name="riceType" ng-model="riceType">
+      		                  <select  name="riceType" ng-model="riceType" id="textId">
                                 <option value="--select--" >--select--</option>
                                 <option value="Brown Rice" >Brown Rice</option>
                                 <option value="Semi Polished Rice">Semi Polished Rice</option>
@@ -24,7 +23,7 @@
                     <div class="row" style="margin-bottom:5px">
                       <div class="col-lg-12">
     		                  <label style="padding-left: 5px;" >Quantity :</label>
-                          <select name ="quantity" ng-model="quantity" style="width:146px">
+                          <select name ="quantity" ng-model="quantity" style="width:146px" id="textId1">
                               <option value="--select--" >--select--</option>
                               <option value="5">5 kgs</option>
                               <option value="10">10 kgs</option>
@@ -36,28 +35,27 @@
     	               </div> 
                   </div> 
                   <div>
-                      <button class="btn btn-lg btn-primary" ng-click="save();">save</button>
+                      <button class="btn btn-primary" ng-click="save();" style="height: 32px;margin-left: 108px;">Add to List</button>
                   </div>    
-                  <div style="margin-bottom:5px">
-    		              <label class="lbl" style="padding-left: 10px;">Amount :</label>
-    	           </div>
+    		          <label class="lbl" style="padding-left: 10px;margin-bottom:5px">List Of Items:</label>
     	           <div>
-    		              <table class="table table-bordered table-hover table-striped ">
+    		              <table class="table table-bordered table-hover table-striped " id="myTable">
 	   	                   <thead>
 	   	  	                    <tr>
 	   	  		                       <th >S.no</th>
 	   	  		                       <th>Rice Type</th>
-	   	  		                       <th>Quantity</th>
+	   	  		                       <th>Quantity(kgs)</th>
 	   	  		                       <th>Amount</th>
 	   	  		                       <th>Add/Remove</th>
 	   	  	                    </tr>
 	   	                     </thead>	
 	   	                     <tbody >
 	   	  	                     <tr  ng-repeat="place in placeOrder" >
-	   	  		                         <td ><span ><center>{{$index+1}}</center></span></td>{{data-column}}
+	   	  		                         <td ><span ><center>{{$index+1}}</center></span></td>
 	   	  		                         <td >{{place.riceType}}</td>
 	   	  		                         <td ><center>{{place.quantity}}</center></td>
-	   	  		                         <td>Rs :{{m2}}</td>
+	   	  		                         <td>Rs :</td>
+                                     <td><a href="javascript:" ng-click="remove()">Remove </a> </td>
 	   	  	                    </tr>
 	   	  	                    <tr>
 	   	  		                     <td colspan="5"><center><b  style="margin-left:20px">Total Amount :</b></center></td>
@@ -66,14 +64,18 @@
 	   	               </table>
     	           </div>
           
-    
+          <form action="">
           <div style="margin-bottom:5px">
                 <label class="lbl">Shipping Address :</label>
-         </div>
+                 <input  type="checkbox" value="true" ng-model="check" >
+               
+          </div>
+           </form>
     	   <fieldset style="border: 2px solid #c0c0c0 !important;margin-top:15px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px">
               <div class="row">
                       <div class="col-lg-3" style="margin-bottom: 5px;">
-                          <label style="margin-left:55px">Address:</label>  
+                          <label style="margin-left:55px">Address:</label> 
+                          
                       </div> 
                       <div lass="col-lg-9" style="padding-left: 138px;">
                         <div ng-repeat="addr in accDtl.address" >

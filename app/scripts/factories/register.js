@@ -11,6 +11,7 @@ angular.module('morApp')
 			//var serviceURI = './json/register.json';
 			var serviceURI = getServiceURI.build('mor', 'regUser');
 			console.log('serviceURI::::::::::::::::',serviceURI);
+			console.log(register);
 			$http({
 				method: 'GET',
 				url: serviceURI,

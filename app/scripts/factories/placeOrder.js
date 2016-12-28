@@ -4,8 +4,8 @@ angular.module('morApp')
 .factory('pOrderFactory', ['$http','$q','getServiceURI','$location', function( $http, $q ,getServiceURI,$location){
 	var pOrderFactory = {};
 
-		pOrderFactory.getOrderDetailes = function(emailId){
-			console.log('this is a place Order factory............');
+		pOrderFactory.getOrderDetailes = function(placeOrder){
+			console.log('this is a place Order factory.....111111111111.......',placeOrder);
 
 			var defer = $q.defer();
 			var serviceURI = getServiceURI.build('mor', 'placeorder');
@@ -15,7 +15,7 @@ angular.module('morApp')
 				method: 'GET',
 				url: serviceURI,
 				params:	{
-					placeorder:placeorder
+					placeorder:placeOrder
 					}
 			})
 			.then(function(data){
@@ -32,3 +32,4 @@ angular.module('morApp')
 
 	return pOrderFactory;
 }]);
+

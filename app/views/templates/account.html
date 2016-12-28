@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <div class="row">
 	<div class="col-lg-2"></div>
-	<div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 458px">
+	<div class="col-lg-8 main-body-container">
 		<div class="row">
 			<div class="col-lg-2"></div>
 			<div class="col-lg-8" >
@@ -15,13 +15,13 @@
 					 	</div>
 						<div class="row">
 					 	   <div class="col-lg-12" style="margin-bottom: 5px;">
-					 			<label style="margin-left: 42px">First Name :</label>{{accDtl.firstName}}
+					 			<label style="margin-left: 12px">First Name <span style="margin-left: 32px;">:</span></label>{{accDtl.firstName}}
 					 
 					 		</div>
 					 	</div>
 					 	<div class="row">
 					 	   <div class="col-lg-12" style="margin-bottom: 5px;">
-					 			<label style="margin-left: 42px">Last Name :</label>{{accDtl.lastName}}
+					 			<label style="margin-left: 11px">Last Name <span style="margin-left: 32px;">:</span></label>{{accDtl.lastName}}
 					 			
 					 		</div>
 					 	</div>
@@ -33,13 +33,13 @@
 					 	</div>
 					 	<div class="row">
 					 	   <div class="col-lg-12" style="margin-bottom: 5px;">
-					 			<label style="margin-left: 71px">E-mail :</label>{{accDtl.email}}
+					 			<label style="margin-left: 12px">E-mail <span style="margin-left: 59px;">:</span></label>{{accDtl.email}}
 					 			
 					 		</div>
 					 	</div>
 					 	<div class="row">
-					 	   <div class="col-lg-3" style="margin-bottom: 5px;">
-                             	<label style="margin-left:55px">Address:</label>  
+					 	   <div class="col-lg-6" style="margin-bottom: 5px;">
+                             	<label style="margin-left:12px">Address <span style="margin-left: 44px;">:</span></label>  
                             </div> 
                             <div lass="col-lg-9" style="padding-left: 138px;">
 					 			<div ng-repeat="addr in accDtl.address" >

@@ -8,6 +8,7 @@ angular.module('morApp')
 //		$location.path('/itemdetails')
 //	}
 $scope.placeOrder=[];
+
     $scope.save = function(){
 
     	 	var place ={}
@@ -15,14 +16,36 @@ $scope.placeOrder=[];
     	   	place.quantity=$scope.quantity;
 			console.log('place::::: ',place);	
     		$scope.placeOrder.push(place);
+
+    		document.getElementById('textId').value = '';
+    		document.getElementById('textId1').value = '';
+            
+			
+
     	}
+
+      $scope.remove=function() {
+         document.getElementById("myTable").deleteRow(1);
+     }
+
     $scope.submit = function(){
-    
-    	console.log('this is a place Order controller..1111111111111..........');
+    	var order ={};
+    	order.check=$scope.check;
+    	console.log($scope.check)
+    	order.orderList = $scope.placeOrder;
+    	 order.email = $scope.accDtl.email;
+    	 order.phone=$scope.accDtl.phone;
+    	console.log("this is a place Order controller..1111111111111..........", order);
     	/*$('#mytable tr').each(function() {
            var customerId = $(this).find("td").eq(2).html();    
 });*/
-			$("td[data-column='"+2+"']")
+			//$("td[data-column='"+2+"']")
+
+			pOrderFactory.getOrderDetailes(order).then(function(data){
+			console.log('controller ::::: ',data);
+
+            });
+
     	
     }	
 
@@ -30,6 +53,7 @@ $scope.placeOrder=[];
 		accountFact.getUserDetails($rootScope.emailId).then(function(data){
 			console.log('controller ::::: ',data);
 			 $scope.accDtl = data;
+
 		});
 	}
    $scope.init = function(){

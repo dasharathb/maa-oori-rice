@@ -2,7 +2,7 @@
 <div style="margin-top:15px;font-size:x-large;margin-bottom:15px;"><center>Order History</center></div>
 <div class="row">
 	<div class="col-lg-2"></div>
-	<div class="col-lg-8" style="border: 3px solid #999; border-radius: 15px; height: 458px">
+	<div class="col-lg-8  main-body-container">
 		
 		<div style="font-size: large;padding-left: 89px;margin-top: 24px;">Last 10 Orders:</div>
 		<div class="row">
@@ -21,25 +21,15 @@
  			 						</tr>
   								</thead>
   								<tbody>
-  								    <tr>
-    									<td>1</td>
-    									<td>Brown Rice</td>
-    									<td>Recived</td>
-    									<td>12/10/2016</td>
-  									</tr>
-  									<tr>
-    									<td>2</td>
-    									<td>Fully polished</td>
-    									<td>Recived</td>
-    									<td>12/11/2016</td>
-  									</tr>
-  									<tr>
-    									<td>3</td>
-    									<td>Polished</td>
-    									<td>...process...</td>
-    									<td>25/11/2016</td>
-  									</tr>
+                  {{orderHistory.email}}
+                
 
+  								    <tr ng-repeat = "order in orderHistory" >
+    									     <td>{{$index+1}}</td>
+    									     <td>{{order.id}}</td>
+    									     <td>{{order.status}}</td>
+    									     <td>{{order.date}}</td>
+  									 </tr>
   								</tbody>
 
   							</table>	

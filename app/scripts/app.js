@@ -78,7 +78,7 @@ angular.module('morApp', [
         })
         .when('/orderHistory', {
             templateUrl: 'views/templates/orderHistory.html',
-            controller: 'placeOrderCntr'
+            controller: 'orderHistoryCntrl'
         })
         .when('/trackMyOrder', {
             templateUrl: 'views/templates/trackMyOrder.html',
@@ -87,6 +87,10 @@ angular.module('morApp', [
         .when('/hello',{
             templateUrl: 'views/templates/hello.html',
             controller: 'Hcntl'
+        })
+         .when('/h',{
+            templateUrl: 'views/templates/hello1.html',
+            controller: 'hello'
         })
         .otherwise({
             redirectTo: '/error'

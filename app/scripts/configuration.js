@@ -15,7 +15,8 @@
         "login": "/login",
         "regUser": "/regUser",
         "account": "/account",
-        "placeorder": "/placeorder"
+        "placeorder": "/placeorder",
+        "orderHistory": "/orderHistory"
       },
       "qPresence": {
         "presence": "/presence"
