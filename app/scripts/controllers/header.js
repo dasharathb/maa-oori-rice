@@ -2,6 +2,7 @@
 angular.module('morApp')
 .controller('headerCntl',['$rootScope', '$scope', '$location',function($rootScope, $scope, $location){
 	$rootScope.isLoggedIn = false;
+	$rootScope.isAdmin = false;
 	$rootScope.loginEmail = "tttt";
 	$scope.login=function(){
 		console.log('this is login.............');
@@ -9,5 +10,10 @@ angular.module('morApp')
 
 	}
 	console.log(':::::::::::::',$rootScope.loginEmail);
+
+	$scope.setting=function(){
+		$location.path('/adminOrderDetails');
+
+	}
 
 }]);

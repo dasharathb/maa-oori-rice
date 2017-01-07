@@ -4,6 +4,7 @@ angular.module('morApp')
 	function($rootScope, $scope, $location, $timeout, loginFactory, regFactory){
 	console.log('hello this is home page controller...');
 	
+	$rootScope.isAdmin = false;
 	$scope.login = function(){
 		$rootScope.isLoggedIn = false;
 		var loginDtl = {};
@@ -40,14 +41,12 @@ angular.module('morApp')
 				$rootScope.isLoggedIn = true;
 				$rootScope.loginUserName = result.firstName +" "+ result.lastName;
 				$rootScope.emailId= result.email;
+				$rootScope.isAdmin = result.isAdmin;
 				$location.path('/product');
 			}else{
 				$scope.error = "user name or password is invalid.";
 			}			
-			
-					
-			
-			
+						
 		});
 	}	
 	$scope.register=function(){

@@ -5,7 +5,9 @@
 	
 	<div style="color:grey">
 		        <h3><u><center> User Registration </center></u></h3>
+
 		   </div>
+		<div style="color: red;font-size: 20px;">*{{msg}}</div>   
 		<form>
 		<center>
 		<fieldset class="fieldset">
@@ -36,14 +38,14 @@
 			</div>
 			<div class="row" style="margin-bottom: 5px">
 			  	<div class="col-lg-12">
-					<span><label class="lbl" style="padding-left: 64px;">Password<span style="color:red">*</span>:</label></span>
-					<input type="password" name="password" ng-model="password" maxlength="10" required>
+					<span><label class="lbl" style="padding-left: 143px;">Password<span style="color:red">*</span>:</label></span>
+					<input type="password" name="password" ng-model="password" id="textbox" maxlength="10" required >(4-10 digits)
 			  	</div>
 			</div>
 			<div class="row" style="margin-bottom: 5px">
 			  	<div class="col-lg-12">
 					<span><label class="lbl">Conform Password<span style="color:red">*</span>:</label></span>
-					<input type="phone" name="conformpassword" ng-model="confirmpassword" maxlength="10" required>
+					<input type="password" name="conformpassword" ng-model="confirmpassword" maxlength="10" required>
 			  	</div>
 			</div>
 			<div class="row" style="margin-bottom: 5px">
@@ -71,7 +73,7 @@
 		    		</div>	
 		    		<div style="margin-left:102px;margin-top:4px">
         	  				<label class="lbl"> Pin : </label>
-        	  				<input type="text" name="Pin" ng-model="Pin" maxlength="6">
+        	  				<input type="number" name="Pin" ng-model="Pin" maxlength="6">
 		    		</div>	
 			    </fieldset>
 				<div style="margin-top:10px">

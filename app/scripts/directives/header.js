@@ -4,14 +4,15 @@ angular.module('morApp')
 	return{
 		scope:{
 			loginUserName:'=',
-			isLoggedIn:'='
+			isLoggedIn:'=',
+			isAdmin:'='
 		},
 		restrict:'EA',
 		templateUrl:'views/templates/header.html',
 		controller:'headerCntl',
 		replace:true,
 		link : function(scope, $rootScope, element, attrs, headerCntl){
-			console.log("this is header...............",$rootScope.loginUserName);
+			console.log(scope.isAdmin," ....this is header...............",$rootScope.loginUserName);
 		}
 		
 	}

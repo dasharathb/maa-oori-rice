@@ -84,13 +84,21 @@ angular.module('morApp', [
             templateUrl: 'views/templates/trackMyOrder.html',
             controller: 'placeOrderCntr'
         })
-        .when('/hello',{
-            templateUrl: 'views/templates/hello.html',
-            controller: 'Hcntl'
+        .when('/adminOrderDetails',{
+            templateUrl: 'views/templates/adminOrderDetails.html',
+            controller: 'admainCntrl'
         })
-         .when('/h',{
-            templateUrl: 'views/templates/hello1.html',
-            controller: 'hello'
+        .when('/todayOrders',{
+            templateUrl: 'views/templates/todayOrders.html',
+            controller: 'todayCntrl'
+        })
+        .when('/configuration',{
+            templateUrl: 'views/templates/configuration.html',
+            controller: 'configueCntrl'
+        })
+        .when('/regSucessPage/:msg',{
+            templateUrl: 'views/templates/regSucessPage.html',
+            controller: 'regSucessCntr'
         })
         .otherwise({
             redirectTo: '/error'

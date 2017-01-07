@@ -1,0 +1,74 @@
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8  main-body-container">
+		  <div style="margin-top:15px;font-size:x-large;margin-bottom:15px;"><center><u> Today Orders</u></center></div>
+		
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10" >
+				<form>
+					<!--<fieldset style="border: 2px solid #7a7a61 !important;margin-top:2px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 14px; height: 100px">-->
+						<div>
+							<table  style="width:100%;background-color: lightskyblue;margin-top: 27px;" class="table table-bordered table-striped table-hover" >
+ 								<thead>
+ 									<tr>
+   				 						<th>S.no</th>
+   				 						<th>Orders Stats</th>
+   				 						<th>status</th>
+  				 						<th>date</th>
+ 			 						</tr>
+  								</thead>
+  								<tbody>
+                			 <tr ng-repeat = "order in orderForAdmin" >
+    									 <td>{{$index+1}}</td>
+    									 <td><a href="javascript:" ng-click="viewOrderDetails(order);">{{order.id}}</td>
+    									 <td>{{order.status}}</td>
+    									 <td>{{order.date}}</td>
+  									 </tr>
+  								</tbody>
+
+  							</table>	
+						</div>
+					 
+		
+					<!--</fieldset>-->	
+				</form>
+			</div>
+				<div id="confirmModal" class="modal fade" style="top: 100px;" aria-hidden="true" role="dialog">
+     		<div class="modal-dialog">
+        		<div class="modal-content">
+
+            		<div class="modal-header"> 
+                        <span><label>Order-Id:{{orders.id}}</label></span>
+                		<button class="close" type="button" data-ng-click="close();" data-ng-disabled="confirmModel.$invalid">
+                    		<span aria-hidden="true">X</span>
+                		</button>
+            		</div>
+
+
+            		<div class="modal-body">
+            			<label>Status:</label>
+                           <select  name="riceType" ng-model="track" id="textId">
+                                <option value="--select--" >--select--</option>
+                                <option value="Recived   your Ordes" >Recived   your Ordes</option>
+                                <option value="Proessing Order">Proessing Order</option>
+                                <option value="Read to delivery">Read to delivery</option>
+                                 <option value="Read to delivery">On the way to delivery</option>
+                                 <option value="Read to delivery">Delivered</option>
+                            </select>
+
+            		</div>	
+            		 <div class="modal-footer">
+            		      <input type="button" class="btn btn-primary" ng-click="save(orders.id);" value="Save">
+                		<input type="button" class="btn btn-cancel" data-ng-click="close()" data-ng-disabled="confirmModel.$invalid" value="Close">
+            		</div>
+        		</div>
+        	</div>
+		</div>
+			<div class="col-lg-1"></div>
+		</div>	
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+</div>

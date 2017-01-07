@@ -12,8 +12,9 @@ $scope.placeOrder=[];
     $scope.save = function(){
 
     	 	var place ={}
-			place.riceType=$scope.riceType;
-    	   	place.quantity=$scope.quantity;
+			     place.riceType=$scope.riceType;
+    	   	 place.quantity=$scope.quantity;
+          //place.date = new Date();
 			console.log('place::::: ',place);	
     		$scope.placeOrder.push(place);
 
@@ -35,14 +36,13 @@ $scope.placeOrder=[];
     	order.orderList = $scope.placeOrder;
     	 order.email = $scope.accDtl.email;
     	 order.phone=$scope.accDtl.phone;
+       order.date = new Date();
+       order.status = 'received';
     	console.log("this is a place Order controller..1111111111111..........", order);
-    	/*$('#mytable tr').each(function() {
-           var customerId = $(this).find("td").eq(2).html();    
-});*/
-			//$("td[data-column='"+2+"']")
-
-			pOrderFactory.getOrderDetailes(order).then(function(data){
+    	pOrderFactory.getOrderDetailes(order).then(function(data){
 			console.log('controller ::::: ',data);
+
+      $location.path('/trackMyOrder');
 
             });
 

@@ -15,7 +15,7 @@
 		<div class="col-lg-1"  style="color:white;" >|</div>
 		<div class="col-lg-2" style="color:white;font-size: large;margin-left: -40px;">
 			<span><a href="#/" style="color:white;">{{loginUserName}} </a></span>
-			<i onclick="alert('clicked');" class="glyphicon glyphicon-cog" style="float: right;margin-top: 3px;"></i>		 		
+			<i  class="glyphicon glyphicon-cog" ng-if="isAdmin"  ng-click="setting();" style="float: right;margin-top: 3px;"></i>		 		
 		</div>
 	</div>	
 </div>	

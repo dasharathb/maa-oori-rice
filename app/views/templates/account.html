@@ -7,11 +7,11 @@
 			<div class="col-lg-8" >
 				<form>
 					<fieldset style="border: 5px solid #7a7a61 !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 14px; height: 366px">
-					 <div class=row>
+					 <div class=row style="margin-left:0px; margin-right:0px;">
 					 	<div class="col-lg-6"></div>
 					 	<div class="col-lg-6">
 					 		<label style=" font-size: small" >User-id:123</label>
-					 		<a href="javascript:" on-click="changePwd();" style="width:108px; padding-left:  37px;font-size: small; margin-right: 18px; ">Change Password ?</a>
+					 		<a href="javascript:" on-click="changePwd();" style="width:108px; padding-left:  37px;font-size: small; ">Change Password ?</a>
 					 	</div>
 						<div class="row">
 					 	   <div class="col-lg-12" style="margin-bottom: 5px;">
@@ -37,18 +37,18 @@
 					 			
 					 		</div>
 					 	</div>
-					 	<div class="row">
-					 	   <div class="col-lg-6" style="margin-bottom: 5px;">
-                             	<label style="margin-left:12px">Address <span style="margin-left: 44px;">:</span></label>  
+					 	<div class="row" style="margin-left:0px; margin-right:0px;">
+					 	   <div class="col-lg-4" style="margin-bottom: 5px;">
+                             	<label >Address :</label>  
                             </div> 
-                            <div lass="col-lg-9" style="padding-left: 138px;">
-					 			<div ng-repeat="addr in accDtl.address" >
-					 				<span>{{addr.addressLine1}}</span><br>
-					 				<span>{{addr.addressLine2}}</span><br>
-					 				<span>{{addr.city}}</span><br>
-					 				<span>{{addr.pin}}</span><br>
-					 				<span>{{addr.state}}</span><br>
-					 			 
+                            <div lass="col-lg-8" style="padding-left: 138px;">
+					 			<div ng-repeat="addr in accDtl.address" class="pull-left">
+					 				<div>{{addr.addressLine1}}</div>
+					 				<div>{{addr.addressLine2}}</div>
+					 				<div>{{addr.city}}</div>
+					 				<div>{{addr.pin}}</div>
+					 				<div>{{addr.state}}</div>
+					 			 	
 					 		 	</div>
 					 		</div>
 					 	</div>	

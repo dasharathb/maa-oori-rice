@@ -1,0 +1,101 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-2"></div>
+   <div class="col-lg-8 main-body-container">
+    <center>
+      <div style=" margin-top:10px;color:grey;font-size: 16px;"><u><b>Quantity Configuration </b></u></div>
+    </center>
+   <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <fieldset style="border: 2px solid #c0c0c0 !important;margin-top:15px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 5px;margin-bottom: 15px;">
+                
+                      <div style="margin-bottom:5px ;margin-top:5px;">
+    		                    <label>Rice type :</label>
+      		                  <select  name="riceType" ng-model="riceType" id="textId" style="height: 25px;">
+                                <option value="--select--" selected="true" >--select--</option>
+                                <option value="Brown Rice" >Brown Rice</option>
+                                <option value="Semi Polished Rice">Semi Polished Rice</option>
+                                <option value="Fully Polished Rice">Fully Polished Rice</option>
+                            </select>
+                    
+                      <button class="btn btn-primary" ng-click="save();" style="height: 27px;">Add </button>
+                  </div>    
+    	           <div>
+    		              <table class="table table-bordered table-hover table-striped ">
+	   	                   <thead>
+	   	  	                    <tr>
+	   	  		                       <th >S.no</th>
+	   	  		                       <th>Rice Type</th>
+	   	  		                       <th>Add/Remove</th>
+	   	  	                    </tr>
+	   	                     </thead>	
+	   	                     <tbody >
+	   	  	                     <tr  ng-repeat="place in placeOrder" >
+	   	  		                         <td ><span ><center>{{$index+1}}</center></span></td>
+	   	  		                         <td >{{place.riceType}}</td>
+                                     <td><a href="javascript:" ng-click="remove()">Remove </a> </td>
+	   	  	                    </tr>
+	   	                     </tbody>
+	   	               </table>
+    	           </div>
+
+                  <div style="margin-bottom:5px ;margin-top:5px;">
+                            <label>Quantity :</label>
+                            <select name ="quantity" ng-model="quantity" style="width:146px" id="textId1">
+                              <option value="--select--" >--select--</option>
+                              <option value="5">5 kgs</option>
+                              <option value="10">10 kgs</option>
+                              <option value="25">25 kgs</option>
+                              <option value="50">50 kgs</option>
+                              <option value="75">75 kgs</option>
+                              <option value="100">100 kgs</option>
+                        </select>
+                    
+                      <button class="btn btn-primary" ng-click="save1();" style="height: 27px;">Add </button>
+                  </div>    
+                 <div>
+                      <table class="table table-bordered table-hover table-striped ">
+                         <thead>
+                              <tr>
+                                   <th >S.no</th>
+                                   <th>Rice Type</th>
+                                   <th>Add/Remove</th>
+                              </tr>
+                           </thead> 
+                           <tbody >
+                               <tr  ng-repeat="place in placeOrder1" >
+                                     <td ><span ><center>{{$index+1}}</center></span></td>
+                                     <td >{{place.quantity}}</td>
+                                     <td><a href="javascript:" ng-click="remove()">Remove </a> </td>
+                              </tr>
+                           </tbody>
+                     </table>
+                 </div>
+
+                 <div class="modal-body">
+                  <label>Status:</label>
+                           <select  name="riceType" ng-model="track" id="textId2">
+                                <option value="--select--" >--select--</option>
+                                <option value="Recived   your Ordes" >Recived   your Ordes</option>
+                                <option value="Proessing Order">Proessing Order</option>
+                                <option value="Read to delivery">Read to delivery</option>
+                                 <option value="Read to delivery">On the way to delivery</option>
+                                 <option value="Read to delivery">Delivered</option>
+                            </select>
+
+                </div>  
+          
+          
+    	   <div style="margin-left:50px;margin-top:5px">
+    		    <button class="btn btn-primary" ng-click="submit()"> Submit </button>
+    		    <button class="btn btn-strong" style="margin-left:270px" > Cancel </button>
+    	   </div>
+         </fieldset>
+      </div>  
+     </div>  	
+      <div class="col-lg-2"></div>
+    </div>   
+      <div class="col-lg-2"></div>
+</div>
+</div>
