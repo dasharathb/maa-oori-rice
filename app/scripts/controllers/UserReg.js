@@ -4,8 +4,16 @@ angular.module('morApp')
 .controller('userRegCntr',['$scope', '$rootScope', '$location', 'regFactory',
 	function($scope, $rootScope, $location, regFactory){
 	console.log('hello this is user Registration page controller...');
-
-
+   $scope.pswMatch=false;
+	$scope.confirmPassword = function(){
+		console.log($scope.password ,'::::::$scope.confirmpassword :::::: ',$scope.confirmpassword);
+		if($scope.password != $scope.confirmpassword){
+         	$scope.confirmePwd="Passwords do not match. ";
+         	$scope.pswMatch= true;
+         }else{
+            $scope.pswMatch=false;
+         }
+	}
 
 	$scope.register=function()
 	{

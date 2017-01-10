@@ -29,6 +29,7 @@ angular.module('morApp')
 		};
 
 		adminFact.saveStatus = function(orderId, status){
+			console.log('status......',orderId,status)
 
 			var defer = $q.defer();
 			var serviceURI = getServiceURI.build('mor', 'adminStatus');
@@ -42,7 +43,7 @@ angular.module('morApp')
 					status:status
 				}
 			}).then(function(data){
-				//console.log('factory ::: ',data);
+				console.log('factory ::: ',data);
 				defer.resolve(data.data);
 			},
 			 function(failedReason){						
