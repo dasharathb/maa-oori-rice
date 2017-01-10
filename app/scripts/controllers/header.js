@@ -14,6 +14,7 @@ angular.module('morApp')
 		$rootScope.isAdmin = false;
 		$rootScope.loginEmail = null;
 		$rootScope.loginUserName="";
+		$rootScope.emailId="";
 		
 	}
 	console.log(':::::::::::::',$rootScope.loginEmail);
